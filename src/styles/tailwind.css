@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Add this in your global CSS file or in a CSS module */
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    white-space: nowrap;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease;
+  }
+  
+  .tooltip-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  body {
+    background-color: #E7E9EB;
+  }
+
+  .social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .social-button:hover {
+    background-color: #005582; /* Darker LinkedIn blue */
+    color: #00a0dc; /* LinkedIn accent color */
+  }
