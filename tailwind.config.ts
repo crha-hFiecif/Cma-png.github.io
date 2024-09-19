@@ -1,13 +1,5 @@
-import type { Config } from "tailwindcss";
-
-//This is the tailwindcss configuration file
-//See: https://tailwindcss.com/docs/configuration
-const config: Config = {
-  // This is the path to all the files that contain our classes
-  // We need to scan these files to find all the classes that we use
-  // This is important because Tailwind will only generate CSS for the classes that we use
-  // This is why we need to include all the files that contain our classes
-  // This way, Tailwind will generate the CSS for all the classes that we use
+/** @type {import('tailwindcss').Config} */
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -35,4 +27,5 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;
+
+module.exports = config;
