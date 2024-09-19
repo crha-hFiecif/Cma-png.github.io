@@ -6,6 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable the image optimization
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/Cma-png.github.io' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Cma-png.github.io' : '',
 };
 
 module.exports = nextConfig;
