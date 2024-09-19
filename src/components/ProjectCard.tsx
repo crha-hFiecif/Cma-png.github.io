@@ -6,7 +6,7 @@ import type { StaticImageData } from 'next/image';
 
 interface ProjectCardProps {
   name: string;
-  description: string;
+  description?: string;
   icon: React.ComponentType<{ className: string }>;
   href: string;
   image?: string | StaticImageData;

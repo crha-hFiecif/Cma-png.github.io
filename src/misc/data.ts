@@ -46,7 +46,9 @@ import { IconBrandGithub } from "@tabler/icons-react";
 import ragGif from '../video/rag.gif';
 import annPng from '../video/ann_and_dt.png';
 import t2sGif from '../video/text_to_sql.gif';
+import t2sql_ft from '../video/ft_sql.png'
 import cnnPng from '../video/cnn.png';
+import t2ImageGif from '../video/text2image.gif'
 import { describe } from "node:test";
 import { MdDescription } from "react-icons/md";
 
@@ -61,14 +63,23 @@ export const projects = [
     image: ragGif,
   },
   {
-    name : "Text-to-Image",
-    tag: "",
-    Description:
-      "test",
-    href: " test",
+    name : "Interactive Image Generation with Diffusion Models",
+    tag: "PyTorch(2.3.0+cu121), stable-diffusion-2-1, CUDA",
+    description:
+      "This project focuses on local image generation using a Stable Diffusion model. Users can input prompts to generate images interactively within a local environment.",
+    href: "https://github.com/Cma-png/super-duper-parakeet/tree/main",
     icon: IconBrandGithub,
-    image: undefined,
+    image: t2ImageGif,
   },
+  // {
+  //   name: "Text to SQL",
+  //   tag: "Python, ChatGPT3.5-turbo/Self-FineTuned LLMs via QLoRA , MSSQL Server, Vanna, ChromaDB, Docker",
+  //   description:
+  //     "A project that translates natural language queries into SQL commands, outputs csv table, and Plotly Charts.",
+  //   href: "https://huggingface.co/Lei-bw/text-to-sql-fm",
+  //   icon: IconBrandGithub,
+  //   image: t2sGif,
+  // },
   {
     name: "QLoRA-SQLBase",
     tag: "Python, Gemma 2b: Self-FineTuned LLMs via QLoRA, Quantization, Nvidia A100/40GB RAM",
@@ -76,7 +87,7 @@ export const projects = [
       "A project that quantized the Gemma 2b in 8-bit and trained with question and answer pairs for text-to-SQL tasks using the LoRA PEFT method. It serves as a foundation model for further development in Text-to-SQL Retrieval-Augmented Generation (RAG) applications.",
     href: "https://huggingface.co/Lei-bw/text-to-sql-fm",
     icon: IconBrandGithub,
-    image: undefined,
+    image: t2sql_ft,
   },
   {
     name: "Heart Disease Identification",

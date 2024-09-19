@@ -309,7 +309,7 @@ export default function HomePage() {
           <h2 className="text-4xl font-bold text-zinc-800">My Projects</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 mt-12">
-            {[...projects].splice(0, 6).map((project, projectIndex) => (
+            {[...projects].splice(0, 7).map((project, projectIndex) => (
               <ProjectCard
                 key={projectIndex}
                 href={project.href}
