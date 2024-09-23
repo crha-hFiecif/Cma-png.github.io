@@ -71,15 +71,15 @@ export const projects = [
     icon: IconBrandGithub,
     image: t2ImageGif,
   },
-  // {
-  //   name: "Text to SQL",
-  //   tag: "Python, ChatGPT3.5-turbo/Self-FineTuned LLMs via QLoRA , MSSQL Server, Vanna, ChromaDB, Docker",
-  //   description:
-  //     "A project that translates natural language queries into SQL commands, outputs csv table, and Plotly Charts.",
-  //   href: "https://huggingface.co/Lei-bw/text-to-sql-fm",
-  //   icon: IconBrandGithub,
-  //   image: t2sGif,
-  // },
+  {
+    name: "Text to SQL",
+    tag: "Python, ChatGPT3.5-turbo/Self-FineTuned LLMs via QLoRA , MSSQL Server, Vanna, ChromaDB, Docker",
+    description:
+      "A project that translates natural language queries into SQL commands, outputs csv table, and Plotly Charts.",
+    href: "https://huggingface.co/Lei-bw/text-to-sql-fm",
+    icon: IconBrandGithub,
+    image: t2sGif,
+  },
   {
     name: "QLoRA-SQLBase",
     tag: "Python, Gemma 2b: Self-FineTuned LLMs via QLoRA, Quantization, Nvidia A100/40GB RAM",
