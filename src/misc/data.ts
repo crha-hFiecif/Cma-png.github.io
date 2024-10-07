@@ -49,10 +49,20 @@ import t2sGif from '../video/text_to_sql.gif';
 import t2sql_ft from '../video/ft_sql.png'
 import cnnPng from '../video/cnn.png';
 import t2ImageGif from '../video/text2image.gif'
+import goapiPng from '../video/api_demo.png'
 import { describe } from "node:test";
 import { MdDescription } from "react-icons/md";
 
 export const projects = [
+  {
+    name: "My Cohere API Project",
+    tag: "Go, Restful API, Cohere",
+    description:
+    "This project provides a simple RESTful API interface for interacting with the Cohere AI model using go.",
+    href: "https://github.com/Cma-png/solid-tribble-translator",
+    icon: IconBrandGithub,
+    image: goapiPng,
+  },
   {
     name: "Research Paper Vector Search Q&A",
     tag: "Python, FastAPI, Pinecone VectorDB, LlamaIndex, Docker, Cohere, Llama3.1, Streamlit",
