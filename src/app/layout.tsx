@@ -3,8 +3,8 @@ import { Header } from "@/components/Header";
 import "@/styles/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "HL-Belinda - Portfolio",
-  description: "Belinda Sim Personal Website",
+  title: "HL-BeChal - Portfolio",
+  description: "BeChal Sim Personal Website",
 };
 
 export default function RootLayout({

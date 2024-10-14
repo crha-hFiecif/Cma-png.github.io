@@ -53,7 +53,7 @@ export default function HomePage() {
         {/* Text section on the right */}
         <div className="flex flex-col items-start">
           <div className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-pink-500">
-            Be L-H SIM
+          BeChal L-H SIM
           </div>
 
           <h4 className="mt-6 text-base text-zinc-600 font-light">
@@ -70,7 +70,7 @@ export default function HomePage() {
           </h4>
           <p>
             <br />
-            I'm HL (Be) SIM, a software developer specializing in natural language processing and machine learning applications.
+            I'm HL (BeChal) SIM, a software developer specializing in natural language processing and machine learning applications.
             <br />
             <br />
             <p>
