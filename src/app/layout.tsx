@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white">
+      <body className="bg-neutral-900 text-white">
         <link rel="icon" href="/images/right.png" />
         <Header />
         {/* Add this image */}

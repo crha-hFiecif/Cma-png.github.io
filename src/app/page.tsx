@@ -40,10 +40,10 @@ export default function HomePage() {
             />
           </div>
           {/* <SocialMediaButtons /> */}
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex justify-center text-blue-900">
             <Link href="/resume.pdf">
               <Button>
-                Download CV(Updated on Feb 2024)
+                <a>Download CV(Updated on Feb 2024)</a>
                 <IconDownload className="h-4 w-6" />
               </Button>
             </Link>
@@ -56,14 +56,14 @@ export default function HomePage() {
           BeChal L-H SIM
           </div>
 
-          <h4 className="mt-6 text-base text-zinc-600 font-light">
+          <h4 className="mt-6 text-base text-neutral-300 font-light">
             Software Developer <br />
             MSc., AIBD @{" "}
             <Link
               href="https://www.polyu.edu.hk/comp/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#853750] no-underline hover:underline"
+              className="text-[#b0eadc] no-underline hover:underline"
             >
               polyu.edu.hk/comp/
             </Link>
@@ -87,7 +87,7 @@ export default function HomePage() {
               href="https://www.polyu.edu.hk/comp/people/academic-staff/prof-pathak-ajay-kumar/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#853750] no-underline hover:underline"
+              className="text-[#b0eadc] no-underline hover:underline"
             >
               Prof. Ajay Kumar Pathak's
             </Link>{" "}
@@ -110,8 +110,8 @@ export default function HomePage() {
 
       {/* My Journey section */}
       <section className="container mx-auto my-20">
-        <h2 className="text-4xl font-bold mb-8">My Journey</h2>
-        <div className="mt-6 space-y-7 text-base text-zinc-600 font-light">
+        <h2 className="text-4xl font-bold mb-8 text-neutral-50">My Journey</h2>
+        <div className="mt-6 space-y-7 text-base text-zinc-100 font-light">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             
                 {/* New Item Before Swivel */}
@@ -306,7 +306,7 @@ export default function HomePage() {
 
         {/* Project section */}
         <section className="mt-24">
-          <h2 className="text-4xl font-bold text-zinc-800">My Projects</h2>
+          <h2 className="text-4xl font-bold text-zinc-50">My Projects</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 mt-12">
             {[...projects].splice(0, 7).map((project, projectIndex) => (
@@ -322,7 +322,7 @@ export default function HomePage() {
             ))}
           </div>
 
-        <div className="mt-7">
+        <div className="mt-7 text-blue-900">
           <Link href="/projects">
             <Button>View My Ongoing Projects</Button>
           </Link>

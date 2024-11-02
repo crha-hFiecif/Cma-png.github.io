@@ -12,11 +12,11 @@ export default function ProjectsPage() {
   return (
     <div>
       <div className="max-w-3xl">
-        <h1 className="text-4xl mt-6 font-bold tracking-tight text-zinc-800 sm:text-5xl">
+        <h1 className="text-4xl mt-6 font-bold tracking-tight text-zinc-50 sm:text-5xl">
           My Ongoing Projects
         </h1>
 
-        <p className="mt-6 text-base text-zinc-600 font-light">
+        <p className="mt-6 text-base text-zinc-400 font-light">
           To be updated
         </p>
       </div>
