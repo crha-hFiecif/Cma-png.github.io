@@ -156,7 +156,7 @@ export default function HomePage() {
               <div>
                 <h4 className="text-sm font-bold">Software Software</h4>
                 <p className="text-sm">
-                  Software Developer Intern in LLMs &amp; ML
+                  Software Developer in LLMs &amp; ML
                   <br />
                   <span className="flex items-center space-x-1">
                     <span>Dec.23 -</span>
