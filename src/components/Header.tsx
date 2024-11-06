@@ -173,7 +173,7 @@ export function Header() {
           "-top-16": !showNav,
         }
       )}
-      style={{ width: "525px", left: "50%", transform: "translateX(-50%)" }} // Fixed width and centered
+      style={{ width: "400px", left: "50%", transform: "translateX(-50%)" }} // Fixed width and centered
     >
       <ul className="flex space-x-6">
         {navigation.map((item, index) => (
