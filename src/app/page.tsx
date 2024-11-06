@@ -24,12 +24,22 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 export default function HomePage() {
   return (
     <>
+    <div className="mb-4">
+            <iframe
+              style={{ borderRadius: '12px' }}
+              src="https://open.spotify.com/embed/track/5vNRhkKd0yEAg8suGBpjeY?utm_source=generator"
+              width="300"
+              height="80"
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>  
+          
       {/* Hero section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-9 items-center">
         {/* Image section on the left */}
         <div className="flex flex-col justify-center items-center lg:order-first">
-          {/* <div className="relative w-72 h-72 rounded-full overflow-hidden mb-6"> */}
-          {/* <div className="relative w-72 h-72 rounded-full overflow-hidden mb-6"> */}
           <div className="relative w-80 h-80 rounded-full overflow-hidden mb-6">
             <Image
               src={heroImage}
@@ -39,7 +49,6 @@ export default function HomePage() {
               style={{ objectFit: 'cover' }}
             />
           </div>
-          {/* <SocialMediaButtons /> */}
           <div className="mt-6 flex justify-center text-blue-900">
             <Link href="/resume.pdf">
               <Button>
@@ -50,10 +59,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Text section on the right */}
-        <div className="flex flex-col items-start">
+        
+        {/* Text section on the right with Spotify iframe */}
+        <div className="flex flex-col items-start relative">
+          {/* Spotify iframe at the top of the right column */}
+          
+
           <div className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-pink-500">
-          BeChal L-H SIM
+            BeChal L-H SIM
           </div>
 
           <h4 className="mt-6 text-base text-neutral-300 font-light">
@@ -96,15 +109,6 @@ export default function HomePage() {
             <br/>
             With expertise in Python, JavaScript, Java, Go, Swift, and SQL, I'm passionate about developing innovative AI solutions through cutting-edge research and hands-on experience. <br />
           </p>
-
-          {/* <div className="mt-6 flex justify-center">
-            <Link href="/resume.pdf">
-              <Button>
-                Download CV(Updated on Feb 2024)
-                <IconDownload className="h-4 w-6" />
-              </Button>
-            </Link>
-          </div> */}
         </div>
       </section>
 
