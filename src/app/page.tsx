@@ -22,20 +22,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 export default function HomePage() {
-  return (
-    <>
-    <div className="mb-4">
-            <iframe
-              style={{ borderRadius: '12px' }}
-              src="https://open.spotify.com/embed/track/5vNRhkKd0yEAg8suGBpjeY?utm_source=generator"
-              width="300"
-              height="80"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>  
-          
+  return ( 
       {/* Hero section */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-9 items-center">
         {/* Image section on the left */}
