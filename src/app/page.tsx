@@ -48,7 +48,7 @@ export default function HomePage() {
 
         
         {/* Text section on the right with Spotify iframe */}
-        <div className="flex flex-col items-start relative">
+          {/* <div className="flex flex-col items-start relative"> */}
           {/* Spotify iframe at the top of the right column */}
           
 
