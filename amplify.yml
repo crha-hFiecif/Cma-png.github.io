@@ -4,8 +4,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm install
-            - npm install -g next
+            - npm ci
         build:
           commands:
             - env | grep -e NODE_ENV -e NEXT_PUBLIC_ >> .env.production
@@ -14,8 +13,10 @@ applications:
         baseDirectory: .next
         files:
           - '**/*'
+        discard-paths: no
       cache:
         paths:
           - node_modules/**/*
           - .next/cache/**/*
-    appRoot: . 
+    appRoot: .
+    buildPath: / 

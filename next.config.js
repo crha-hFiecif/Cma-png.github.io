@@ -5,7 +5,6 @@ const nextConfig = {
   output: 'standalone',
   images: {
     unoptimized: true,
-    domains: ['**'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,10 +14,12 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  distDir: '.next',
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 module.exports = nextConfig;
