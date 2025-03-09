@@ -3,21 +3,19 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
-const TypingText: React.FC = () => {
+export default function TypingText() {
   return (
-    <div className="text-sm inline">
+    <span className="text-sm inline-block text-accent-light">
       <Typewriter
         options={{
-            strings: [
-                '<span class="text-slate-500 hover:text-blue-600">Present</span>'
-              ],
+          strings: ['Present'],
           autoStart: true,
           loop: true,
+          cursor: '_',
           delay: 75,
+          deleteSpeed: 50,
         }}
       />
-    </div>
+    </span>
   );
-};
-
-export default TypingText;
+}

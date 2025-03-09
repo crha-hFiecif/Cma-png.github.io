@@ -55,63 +55,104 @@ import { MdDescription } from "react-icons/md";
 
 export const projects = [
   {
-    name: "My Cohere API Project",
-    tag: "Go, Restful API, Cohere",
-    description:
-    "This project provides a simple RESTful API interface for interacting with the Cohere AI model using go.",
-    href: "https://github.com/Cma-png/solid-tribble-translator",
+    name: "ICD-5 Medical Code AI Engine",
+    tag: "Python, JAX, ML, FastAPI",
+    description: 
+      "An advanced medical code extraction system that leverages machine learning to automatically identify and classify medical codes from clinical documents. Features include high-accuracy code prediction and real-time processing capabilities.",
+    href: "https://github.com/your-medical-code-repo",
     icon: IconBrandGithub,
-    image: goapiPng,
+  },
+  {
+    name: "AI Entity Extraction System",
+    tag: "Python, HuggingFace, VLMs, AWS EC2",
+    description: 
+      "A sophisticated entity extraction system that combines vision-language models to analyze and extract information from images. Implements state-of-the-art transformer architectures for accurate entity recognition.",
+    href: "https://github.com/your-entity-extraction-repo",
+    icon: IconBrandGithub,
+  },
+  {
+    name: "Instant Stocks Analysis Dashboard",
+    tag: "Python, AWS Bedrock, FastAPI",
+    description: 
+      "A real-time stock market analysis platform that provides instant insights and Q&A capabilities. Utilizes AWS Bedrock for advanced natural language processing and market data analysis.",
+    href: "https://github.com/your-stocks-dashboard-repo",
+    icon: IconBrandGithub,
+  },
+  {
+    name: "AI Meeting Minutes Generator",
+    tag: "Swift, Google Gemini, SAIF",
+    description: 
+      "An automated system that generates comprehensive meeting minutes from audio recordings. Leverages Google Gemini for advanced speech recognition and natural language summarization.",
+    href: "https://github.com/your-meeting-minutes-repo",
+    icon: IconBrandGithub,
+  },
+  {
+    name: "Multimodal AI Query System",
+    tag: "Python, FastAPI, LangChain, OpenAI, Pinecone, Docker",
+    description: 
+      "A web application that combines vision and text AI capabilities to answer queries about images and documents. Features include OCR processing, semantic search, and multi-modal reasoning using state-of-the-art AI models.",
+    href: "https://github.com/crha-hFiecif/sturdy-engine",
+    icon: IconBrandGithub,
   },
   {
     name: "Research Paper Vector Search Q&A",
-    tag: "Python, FastAPI, Pinecone VectorDB, LlamaIndex, Docker, Cohere, Llama3.1, Streamlit",
+    tag: "Python, FastAPI, Pinecone, LlamaIndex, Docker, Cohere, Llama2",
     description:
-      "A project leverages local LLMs and Vector Databases to enable document-based search functionality. Users can upload PDFs, convert them into vector embeddings, and store them in a vector database. The tool also provides a chat interface for querying the uploaded documents using a language model.",
+      "An intelligent document search system that converts research papers into vector embeddings for semantic search. Integrates local LLMs with vector databases to enable natural language querying of technical documents.",
     href: "https://github.com/Cma-png/verbose-adventure",
     icon: IconBrandGithub,
     image: ragGif,
   },
   {
-    name : "Interactive Image Generation with Diffusion Models",
-    tag: "PyTorch(2.3.0+cu121), stable-diffusion-2-1, CUDA",
+    name: "Interactive Image Generation with Diffusion",
+    tag: "PyTorch, Stable Diffusion, CUDA, Gradio",
     description:
-      "This project focuses on local image generation using a Stable Diffusion model. Users can input prompts to generate images interactively within a local environment.",
+      "A local deployment of Stable Diffusion 2.1 for interactive image generation. Implements custom prompt engineering and image processing pipelines for enhanced generation quality.",
     href: "https://github.com/Cma-png/super-duper-parakeet/tree/main",
     icon: IconBrandGithub,
     image: t2ImageGif,
   },
   {
-    name: "Text to SQL",
-    tag: "Python, ChatGPT3.5-turbo/Self-FineTuned LLMs via QLoRA , MSSQL Server, Vanna, ChromaDB, Docker",
+    name: "Text-to-SQL Assistant",
+    tag: "Python, GPT-3.5, MSSQL, Vanna, ChromaDB, Docker",
     description:
-      "A project that translates natural language queries into SQL commands, outputs csv table, and Plotly Charts.",
+      "An intelligent SQL query generator that translates natural language questions into SQL commands. Features include query visualization, CSV export, and interactive chart generation using Plotly.",
     href: "https://huggingface.co/Lei-bw/text-to-sql-fm",
     icon: IconBrandGithub,
     image: t2sGif,
   },
   {
-    name: "QLoRA-SQLBase",
-    tag: "Python, Gemma 2b: Self-FineTuned LLMs via QLoRA, Quantization, Nvidia A100/40GB RAM",
+    name: "QLoRA-SQLBase Model",
+    tag: "Python, Gemma 2b, QLoRA, NVIDIA A100",
     description:
-      "A project that quantized the Gemma 2b in 8-bit and trained with question and answer pairs for text-to-SQL tasks using the LoRA PEFT method. It serves as a foundation model for further development in Text-to-SQL Retrieval-Augmented Generation (RAG) applications.",
+      "A fine-tuned language model for text-to-SQL tasks using quantized LoRA (QLoRA) on Gemma 2b. Optimized for memory efficiency while maintaining high performance on SQL generation tasks.",
     href: "https://huggingface.co/Lei-bw/text-to-sql-fm",
     icon: IconBrandGithub,
     image: t2sql_ft,
   },
   {
-    name: "Heart Disease Identification",
-    tag: "Python, Pytorch, R, Decision Tree, Artificial Neural Network(ANN) ", 
-    description: "A deep learning project that compares the performance of machine learning models on a full heart disease dataset versus a reduced feature set with higher correlation. We evaluate Decision Tree and ANN models, where the ANN includes two hidden layers (64 and 32 neurons) with ReLU activation and dropout for regularization. Metrics like accuracy, F1-score, and Matthews Correlation Coefficient (MCC) are used to determine which approach yields better classification performance. Dataset used is sourced from lEEE",
+    name: "Go-based AI API Service",
+    tag: "Go, RESTful API, Cohere, Docker",
+    description:
+      "A lightweight REST API service built in Go that provides a clean interface to Cohere's AI models. Features robust error handling, request validation, and containerized deployment.",
+    href: "https://github.com/Cma-png/solid-tribble-translator",
+    icon: IconBrandGithub,
+    image: goapiPng,
+  },
+  {
+    name: "Heart Disease Classification",
+    tag: "Python, PyTorch, R, Decision Trees, ANN",
+    description: 
+      "A comparative study of machine learning models for heart disease prediction. Implements both traditional (Decision Trees) and deep learning (ANN) approaches with comprehensive performance analysis.",
     href: "https://github.com/Cma-png/curly-octo-waffle",
     icon: IconBrandGithub,
     image: annPng,
   },
   {
-    name: "MNIST Image Classification using CNN",
-    tag: "Python, Pytorch, Convolutional Neural Network (CNN)",
+    name: "MNIST CNN Classifier",
+    tag: "Python, PyTorch, CNN Architecture",
     description:
-      "This is a PyTorch implementation of a custom CNN model for classifying MNIST handwritten digits. The architecture features three convolutional layers, two max-pooling layers, and two fully connected layers, optimized for efficient performance on smaller datasets.",
+      "A custom CNN implementation for MNIST digit classification achieving 99.17% accuracy. Features a carefully designed architecture with three convolutional layers and advanced regularization techniques.",
     href: "https://github.com/Cma-png/super-duper-octo-pancake",
     icon: IconBrandGithub,
     image: cnnPng,

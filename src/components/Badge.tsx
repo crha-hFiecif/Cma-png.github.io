@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-type BadgeColor = 'blue' | 'gray' | 'red' | 'green' | 'yellow' | 'indigo' | 'purple' | 'pink';
+type BadgeColor = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
 
 interface BadgeProps {
   text: string;
@@ -11,19 +11,17 @@ interface BadgeProps {
 
 const Badge: React.FC<BadgeProps> = ({ text, color, href }) => {
   const colorClasses = {
-    blue: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 hover:bg-transparent hover:text-blue-800 hover:dark:text-blue-300 hover:border-dashed hover:border-2 hover:border-blue-800 hover:dark:border-blue-300 transition-all duration-300',
-    gray: 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:bg-transparent hover:text-gray-800 hover:dark:text-gray-300 hover:border-dashed hover:border-2 hover:border-gray-800 hover:dark:border-gray-300 transition-all duration-300',
-    red: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 hover:bg-transparent hover:text-red-800 hover:dark:text-red-300 hover:border-dashed hover:border-2 hover:border-red-800 hover:dark:border-red-300 transition-all duration-300',
-    green: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 hover:bg-transparent hover:text-green-800 hover:dark:text-green-300 hover:border-dashed hover:border-2 hover:border-green-800 hover:dark:border-green-300 transition-all duration-300',
-    yellow: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 hover:bg-transparent hover:text-yellow-800 hover:dark:text-yellow-300 hover:border-dashed hover:border-2 hover:border-yellow-800 hover:dark:border-yellow-300 transition-all duration-300',
-    indigo: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 hover:bg-transparent hover:text-indigo-800 hover:dark:text-indigo-300 hover:border-dashed hover:border-2 hover:border-indigo-800 hover:dark:border-indigo-300 transition-all duration-300',
-    purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 hover:bg-transparent hover:text-purple-800 hover:dark:text-purple-300 hover:border-dashed hover:border-2 hover:border-purple-800 hover:dark:border-purple-300 transition-all duration-300',
-    pink: 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300 hover:bg-transparent hover:text-pink-800 hover:dark:text-pink-300 hover:border-dashed hover:border-2 hover:border-pink-800 hover:dark:border-pink-300 transition-all duration-300',
+    primary: 'bg-primary/10 text-primary-light hover:bg-primary/20 border-primary/20',
+    secondary: 'bg-secondary/10 text-secondary-light hover:bg-secondary/20 border-secondary/20',
+    success: 'bg-green-900/10 text-green-400 hover:bg-green-900/20 border-green-900/20',
+    warning: 'bg-yellow-900/10 text-yellow-400 hover:bg-yellow-900/20 border-yellow-900/20',
+    error: 'bg-red-900/10 text-red-400 hover:bg-red-900/20 border-red-900/20',
+    info: 'bg-blue-900/10 text-blue-400 hover:bg-blue-900/20 border-blue-900/20',
   };
 
   const badge = (
     <span
-      className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${colorClasses[color]}`}
+      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border transition-colors duration-300 ${colorClasses[color]}`}
     >
       {text}
     </span>

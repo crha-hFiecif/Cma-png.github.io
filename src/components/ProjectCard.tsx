@@ -21,47 +21,50 @@ export function ProjectCard({
   tag,
 }: ProjectCardProps) {
   return (
-    <div className="flex flex-col lg:flex-row items-center space-x-6 p-6 border border-zinc-200 rounded-lg shadow-md 
-      hover:bg-gradient-to-r hover:from-green-100 hover:to-amber-100 hover:border-emerald-50 hover:shadow-cyan-500/50">
+    <div className="group flex flex-col h-full bg-background-light/30 border border-primary/20 rounded-lg shadow-lg hover:shadow-accent/20 hover:border-accent/40 transition-all duration-300">
+      {/* Image Container */}
       {image && (
-        <div className="flex-shrink-0">
+        <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
           <Image 
             src={image} 
             alt={name} 
-            className="rounded-md" 
-            width={450}
-            height={450}
-            unoptimized
+            className="object-cover object-center transition-transform duration-300 group-hover:scale-105" 
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       )}
 
-      <div className="flex flex-col justify-center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white 
-          shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
-          <Icon className="h-8 w-8" />
-        </div>
-
-        <div className="mt-2">
-          <h2 className="text-xl font-semibold text-zinc-900">{name}</h2>
-
+      {/* Content Container */}
+      <div className="flex flex-col flex-grow p-6">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 
+            shadow-md shadow-primary/5 ring-1 ring-primary/20 group-hover:bg-accent/20 group-hover:ring-accent/30 transition-colors duration-300">
+            <Icon className="h-6 w-6 text-primary-light group-hover:text-accent-light transition-colors duration-300" />
+          </div>
           {tag && (
-            <div className="text-sm font-medium mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600">
+            <div className="text-xs font-medium text-secondary-light bg-secondary/5 px-3 py-1 rounded-full group-hover:bg-accent/5 group-hover:text-accent-light transition-colors duration-300">
               {tag}
             </div>
           )}
-
-          <p className="text-zinc-500 font-light">{description}</p>
-
-          <Link
-            target="_blank"
-            href={href}
-            className="flex text-zinc-600 items-center gap-1 hover:underline mt-2"
-          >
-            Learn more
-            <IconArrowRight size={18} />
-          </Link>
         </div>
+
+        <h2 className="text-xl font-semibold text-background-paper group-hover:text-accent-light transition-colors duration-300 mb-3">
+          {name}
+        </h2>
+
+        <p className="text-secondary-light text-sm mb-6 flex-grow group-hover:text-background-paper transition-colors duration-300">
+          {description}
+        </p>
+
+        <Link
+          target="_blank"
+          href={href}
+          className="inline-flex items-center gap-2 text-sm text-primary-light hover:text-accent transition-colors duration-300 mt-auto"
+        >
+          View Project
+          <IconArrowRight size={16} />
+        </Link>
       </div>
     </div>
   );

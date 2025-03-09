@@ -2,12 +2,23 @@ import React from "react";
 
 export function Button({
   children,
+  className = "",
 }: {
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <button
-      className="cursor-pointer uppercase bg-[#b0eadc]  px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 hover:shadow-[0.5rem_0.5rem_#fcd34d,-0.5rem_-0.5rem_#bef264] transition"
+      className={`
+        inline-flex items-center px-4 py-2 
+        bg-primary text-background-paper
+        hover:bg-primary-light
+        active:bg-primary-dark
+        transition-colors duration-300
+        rounded-md font-medium
+        shadow-lg shadow-primary/20
+        ${className}
+      `}
     >
       {children}
     </button>
