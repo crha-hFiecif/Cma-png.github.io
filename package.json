@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node verify-build.js && next build",
-    "start": "next start -p $PORT",
-    "lint": "next lint",
-    "verify": "node verify-build.js"
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.0.0",

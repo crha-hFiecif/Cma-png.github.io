@@ -1,24 +1,16 @@
 version: 1
-applications:
-  - frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm install
-            - npm install jquery@3.7.1 --save
-            - npm run verify
-        build:
-          commands:
-            - env | grep -e NODE_ENV -e NEXT_PUBLIC_ >> .env.production
-            - npm run build
-      artifacts:
-        baseDirectory: .next
-        files:
-          - '**/*'
-        discard-paths: no
-      cache:
-        paths:
-          - node_modules/**/*
-          - .next/cache/**/*
-    appRoot: .
-    buildPath: / 
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/* 
