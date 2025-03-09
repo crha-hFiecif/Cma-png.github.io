@@ -20,6 +20,16 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  webpack: (config, { isServer }) => {
+    // Add jQuery support
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        jquery: require.resolve('jquery'),
+      };
+    }
+    return config;
+  },
 };
 
 module.exports = nextConfig;

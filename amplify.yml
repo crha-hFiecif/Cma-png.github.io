@@ -4,7 +4,9 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm ci
+            - npm install
+            - npm install jquery@3.7.1 --save
+            - npm run verify
         build:
           commands:
             - env | grep -e NODE_ENV -e NEXT_PUBLIC_ >> .env.production
