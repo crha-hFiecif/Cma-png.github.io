@@ -22,29 +22,27 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 export default function HomePage() {
-  return (
+  return ( 
     <>
       {/* Hero section */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-9 items-center">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
         {/* Image section on the left */}
         <div className="flex flex-col justify-center items-center lg:order-first">
-          {/* <div className="relative w-72 h-72 rounded-full overflow-hidden mb-6"> */}
-          {/* <div className="relative w-72 h-72 rounded-full overflow-hidden mb-6"> */}
-          <div className="relative w-80 h-80 rounded-full overflow-hidden mb-6">
+          <div className="relative w-80 h-80 rounded-full overflow-hidden mb-6 ring-2 ring-accent/30 shadow-xl shadow-accent/10 group-hover:ring-accent transition-all duration-300">
             <Image
               src={heroImage}
-              alt="Hero image"
+              alt="Profile photo"
               priority
               fill
               style={{ objectFit: 'cover' }}
+              className="transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-          {/* <SocialMediaButtons /> */}
           <div className="mt-6 flex justify-center">
-            <Link href="/resume.pdf">
-              <Button>
-                Download CV(Updated on Feb 2024)
-                <IconDownload className="h-4 w-6" />
+            <Link href="/resume.pdf" target="_blank">
+              <Button className="group">
+                Download Resume
+                <IconDownload className="h-4 w-4 ml-2 group-hover:text-accent-light transition-colors duration-300" />
               </Button>
             </Link>
           </div>
@@ -52,279 +50,69 @@ export default function HomePage() {
 
         {/* Text section on the right */}
         <div className="flex flex-col items-start">
-          <div className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-pink-500">
-            Be L-H SIM
-          </div>
+          <h1 className="text-4xl sm:text-5xl font-bold">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary-light hover:from-primary-light hover:to-accent transition-all duration-300">
+              BeChal L-H SIM
+            </span>
+          </h1>
 
-          <h4 className="mt-6 text-base text-zinc-600 font-light">
-            Software Developer <br />
-            MSc., AIBD @{" "}
+          <h2 className="mt-6 text-xl text-secondary-light font-light">
+            <span className="text-accent-light hover:text-background-paper transition-colors duration-300">
+              AI Developer & Machine Learning Engineer
+            </span>
+            <br />
+            MSc., Artificial Intelligence & Big Data Computing @{" "}
             <Link
               href="https://www.polyu.edu.hk/comp/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#853750] no-underline hover:underline"
+              className="text-primary-light hover:text-accent-light transition-colors duration-300"
             >
-              polyu.edu.hk/comp/
+              The Hong Kong Polytechnic University
             </Link>
-          </h4>
-          <p>
-            <br />
-            I'm HL (Be) SIM, a software developer specializing in natural language processing and machine learning applications.
-            <br />
-            <br />
-            <p>
-              As an MSc AI student at PolyU, my coursework includes{' '}
-              <Badge text="COMP5423 Natural Language Processing" color="blue" href="https://www.polyu.edu.hk/comp/docdrive/tpg/subject/COMP5423.pdf" />,{' '}
-              <Badge text="COMP5523 Computer Vision and Image Processing" color="green" href="https://www.polyu.edu.hk/comp/docdrive/tpg/subject/COMP5523.pdf" />,{' '}
-              <Badge text="COMP5434 Big Data Computing" color="purple" href="https://www.polyu.edu.hk/comp/docdrive/tpg/subject/COMP5434.pdf" />,{' '}
-              <Badge text="COMP5541 Machine Learning and Data Analytics" color="pink" href="https://www.polyu.edu.hk/comp/docdrive/tpg/subject/COMP5541.pdf" />,{' '}
-              <Badge text="COMP5241 Software Engineering and Development" color="yellow" href="https://www.polyu.edu.hk/comp/docdrive/tpg/subject/COMP5241.pdf" />, and so on{' '}.
+          </h2>
+
+          <div className="mt-8 space-y-4">
+            <p className="text-secondary-light/90 text-lg leading-relaxed hover:text-background-paper transition-colors duration-300">
+              I'm a <span className="text-accent-light font-semibold">Backend Developer</span> with a strong focus on <span className="text-accent-light font-semibold">AI/ML integration</span> and <span className="text-accent-light font-semibold">microservices architecture</span>. Currently working at Swivel Software while pursuing my part-time Master's degree in AI & Big Data Computing at PolyU and will graduate in end of April 2025, specializing in LLMs, computer vision and machine learning applications.
             </p>
-            <br />
-            This summer, I'll begin my master's thesis on detecting sophisticated fake images/videos via Diffusion Model under{" "}
-            <Link
-              href="https://www.polyu.edu.hk/comp/people/academic-staff/prof-pathak-ajay-kumar/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#853750] no-underline hover:underline"
-            >
-              Prof. Ajay Kumar Pathak's
-            </Link>{" "}
-            supervision.
-            <br/>
-            <br/>
-            With expertise in Python, JavaScript, Java, Go, Swift, and SQL, I'm passionate about developing innovative AI solutions through cutting-edge research and hands-on experience. <br />
-          </p>
 
-          {/* <div className="mt-6 flex justify-center">
-            <Link href="/resume.pdf">
-              <Button>
-                Download CV(Updated on Feb 2024)
-                <IconDownload className="h-4 w-6" />
-              </Button>
-            </Link>
-          </div> */}
-        </div>
-      </section>
+            <p className="text-secondary-light/90 text-lg leading-relaxed hover:text-background-paper transition-colors duration-300">
+              With a background in <span className="text-accent-light font-semibold">Business Intelligence and Analytics</span>, I bring a unique blend of technical expertise and business acumen. My experience spans developing <span className="text-accent-light font-semibold">ML-powered solutions</span>, implementing <span className="text-accent-light font-semibold">LLMs, RAG,OCR & Vision Models</span>, and building <span className="text-accent-light font-semibold">cloud-native applications</span> using cutting-edge technologies.
+            </p>
 
-      {/* My Journey section */}
-      <section className="container mx-auto my-20">
-        <h2 className="text-4xl font-bold mb-8">My Journey</h2>
-        <div className="mt-6 space-y-7 text-base text-zinc-600 font-light">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            
-                {/* New Item Before Swivel */}
-      <div className="flex flex-col items-center sm:items-start">
-        <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-          <Image
-            src={PolyUImg}  // Replace with your new image import
-            alt="PolyU"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-
-
-        <div>
-          <h4 className="text-sm font-bold">PolyU</h4>
-          <p className="text-sm">
-            Part-Time Research Assistant/Engineer
-            <br />
-            <span className="flex items-center space-x-1">
-              <span>Jun.24 -</span>
-              <TypingText />
-            </span>
-          </p>
-          </div>
-        </div>
-
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={SwivelImg}
-                  alt="Swivel"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">Software Software</h4>
-                <p className="text-sm">
-                  Software Developer in LLMs &amp; ML
-                  <br />
-                  <span className="flex items-center space-x-1">
-                    <span>Dec.23 -</span>
-                      <TypingText /> {/* Use TypingText component here */}
-                  </span>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={PolyUImg}
-                  alt="PolyU"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">PolyU</h4>
-                <p className="text-sm">
-                  Master of Science Degree in AI &amp; Data Computing
-                  <br />
-                  <span className="flex items-center space-x-1">
-                  <span>Sep.23 -</span>
-                  <TypingText /> {/* Use TypingText component here */} (Exp Dec.24)
-                  </span>
-                </p>
-              </div>
-            </div>
-
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={HKTImg}
-                  alt="HKT"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">HKT</h4>
-                <p className="text-sm">
-                  Graduate Programme, Fintech
-                  <br />
-                  Jul.23 - Sept.23
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={ProMexImg}
-                  alt="ProMEX"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">ProMEX</h4>
-                <p className="text-sm">
-                  Associate Business &amp; System Analytsis Intern
-                  <br />
-                  Feb.23 - Jun.23
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={KNImg}
-                  alt="Kuehne+Nagel"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">Kuehne+Nagel</h4>
-                <p className="text-sm">
-                  Data Solution Intern
-                  <br />
-                  Jun.22 - Jul.22
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={MUImg}
-                  alt="HKMU"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">HKMU</h4>
-                <p className="text-sm">
-                  Bachelor Hons BIA
-                  <br />
-                  Sept.21 - May.23
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={GovImg}
-                  alt="Census and Statistics Department"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold font-mono">
-                  Census and Statistics Department
-                </h4>
-                <p className="text-sm">
-                  Enumerator
-                  <br />
-                  Jun.21 - Aug.21
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center sm:items-start">
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden mb-4">
-                <Image
-                  src={HKCCImg}
-                  alt="PolyU HKCC"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold">PolyU HKCC</h4>
-                <p className="text-sm">
-                  A.D acct
-                  <br />
-                  Sept.19 - Jul.21
-                </p>
-              </div>
+            <div className="flex flex-wrap gap-2 pt-4">
+              <Badge text="Machine Learning" color="primary" />
+              <Badge text="Computer Vision" color="success" />
+              <Badge text="Cloud Services" color="info" />
+              <Badge text="Backend Development" color="warning" />
             </div>
           </div>
         </div>
       </section>
 
-        {/* Project section */}
-        <section className="mt-24">
-          <h2 className="text-4xl font-bold text-zinc-800">My Projects</h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 mt-12">
-            {[...projects].splice(0, 7).map((project, projectIndex) => (
-              <ProjectCard
-                key={projectIndex}
-                href={project.href}
-                name={project.name}
-                tag={project.tag}
-                description={project.description}
-                icon={project.icon}
-                image={project.image} // Pass image here 
-              />
-            ))}
-          </div>
-
-        <div className="mt-7">
-          <Link href="/projects">
-            <Button>View My Ongoing Projects</Button>
+      {/* Featured Projects section */}
+      <section className="mb-24">
+        <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-light to-primary-light mb-8 hover:from-primary-light hover:to-accent-light transition-all duration-300">
+          Featured Projects
+        </h2>
+        <div className="grid grid-cols-1 gap-8">
+          {projects.slice(0, 4).map((project, index) => (
+            <ProjectCard
+              key={index}
+              href={project.href}
+              name={project.name}
+              tag={project.tag}
+              description={project.description}
+              icon={project.icon}
+              image={project.image}
+            />
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Link href="/projects" className="text-primary-light hover:text-accent-light transition-colors duration-300 group">
+            View All Projects 
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </section>

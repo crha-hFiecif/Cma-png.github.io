@@ -6,8 +6,33 @@ const config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      colors: {
+        'primary': {
+          DEFAULT: '#1a472a', // Dark green
+          light: '#2d5a3c',
+          dark: '#0d3319',
+        },
+        'secondary': {
+          DEFAULT: '#718096', // Professional grey
+          light: '#A0AEC0',
+          dark: '#4A5568',
+        },
+        'accent': {
+          DEFAULT: '#c5a880', // Warm gold
+          light: '#d4bc99',
+          dark: '#b69566',
+        },
+        'background': {
+          DEFAULT: '#1a1a1a', // Dark background
+          light: '#2d2d2d',
+          paper: '#ffffff',
+        }
+      }
+    },
     container: {
       center: true,
+      padding: '2rem',
     },
     fontSize: {
       xs: ["0.8125rem", { lineHeight: "1.5rem" }],

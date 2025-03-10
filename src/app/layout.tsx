@@ -3,8 +3,8 @@ import { Header } from "@/components/Header";
 import "@/styles/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "HL-Belinda - Portfolio",
-  description: "Belinda Sim Personal Website",
+  title: "HL-BeChal - Portfolio",
+  description: "BeChal Sim - AI & Machine Learning Engineer",
 };
 
 export default function RootLayout({
@@ -13,15 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-white">
-        <link rel="icon" href="/images/right.png" />
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-background text-background-paper">
+        <link rel="icon" href="/images/icon.png" />
         <Header />
-        {/* Add this image */}
-        <div className="absolute top-0 left-0 p-4">
-          <img src="/images/right.png" alt="Logo" className="w-12 h-12" />
-        </div>
-        <main className="container min-h-screen px-4 sm:px-10 py-24">
+        <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-light via-background to-background -z-10" />
+        <main className="container min-h-screen px-4 sm:px-10 py-24 relative">
           {children}
         </main>
       </body>

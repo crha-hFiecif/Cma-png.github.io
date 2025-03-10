@@ -4,8 +4,10 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // Disable the image optimization
+    unoptimized: true,
   },
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 module.exports = nextConfig;

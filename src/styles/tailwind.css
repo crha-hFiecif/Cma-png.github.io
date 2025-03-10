@@ -24,8 +24,9 @@
   }
 
   body {
-    background-color: #E7E9EB;
+    background-color: #191a1b; 
   }
+  /* #E7E9EB */
 
   .social-button {
     display: inline-flex;
